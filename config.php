@@ -1,5 +1,5 @@
 <?php
-$db_name='admin';
+$db_name='solartec';
 $db_user='root';
 $db_pass='';
 $db_host='localhost';
@@ -10,6 +10,6 @@ if(!$con){
     echo "Database connection error ";
 } 
 else{
-   //  echo "Connected to Database.";
+     echo "Connected to Database.";
 }
 ?>
