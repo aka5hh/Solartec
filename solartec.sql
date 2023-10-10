@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 04, 2023 at 12:03 PM
+-- Generation Time: Oct 10, 2023 at 09:45 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `admin`
+-- Database: `solartec`
 --
 
 -- --------------------------------------------------------
@@ -35,6 +35,15 @@ CREATE TABLE `banners` (
   `ban_url` varchar(200) NOT NULL,
   `ban_image` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `banners`
+--
+
+INSERT INTO `banners` (`ban_id`, `ban_title`, `ban_subtitle`, `ban_button`, `ban_url`, `ban_image`) VALUES
+(1, 'Solar Panels', 'This version will continue to update.', 'Read me', '#', 'banner_1696914142_628011.jpg'),
+(2, 'Solar Panel 2', 'Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.', 'Read More', '#', 'banner_1696914160_473966.jpg'),
+(3, 'Solar Panel 3', 'Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.', 'Click Me', '#', 'banner_1696914179_553673.jpg');
 
 -- --------------------------------------------------------
 
@@ -123,7 +132,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `banners`
 --
 ALTER TABLE `banners`
-  MODIFY `ban_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ban_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `roles`
