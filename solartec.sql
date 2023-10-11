@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 10, 2023 at 09:45 AM
+-- Generation Time: Oct 11, 2023 at 11:25 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -43,7 +43,30 @@ CREATE TABLE `banners` (
 INSERT INTO `banners` (`ban_id`, `ban_title`, `ban_subtitle`, `ban_button`, `ban_url`, `ban_image`) VALUES
 (1, 'Solar Panels', 'This version will continue to update.', 'Read me', '#', 'banner_1696914142_628011.jpg'),
 (2, 'Solar Panel 2', 'Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.', 'Read More', '#', 'banner_1696914160_473966.jpg'),
-(3, 'Solar Panel 3', 'Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.', 'Click Me', '#', 'banner_1696914179_553673.jpg');
+(4, 'Solar Panel 3', 'Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.', 'Click Me', '#', 'banner_1696914179_553673.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contact`
+--
+
+CREATE TABLE `contact` (
+  `con_id` int(11) NOT NULL,
+  `con_name` varchar(50) NOT NULL,
+  `con_email` varchar(40) NOT NULL,
+  `con_subject` varchar(250) NOT NULL,
+  `con_message` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `contact`
+--
+
+INSERT INTO `contact` (`con_id`, `con_name`, `con_email`, `con_subject`, `con_message`) VALUES
+(3, 'Abu Bakar Siddique', 'mohammad.akash31@gmail.com', 'This website is slow. ', 'This website is slow. This website is slow. This website is slow. This website is slow. This website is slow. This website is slow. This website is slow. '),
+(4, 'Akash', 'akash@gmail.com', 'This website is Fast. ', 'This website is Fast. This website is Fast. This website is Fast. This website is Fast. This website is Fast. This website is Fast. This website is Fast. This website is Fast. '),
+(5, 'Aqib', 'aqib@gmail.com', 'This website is slow. and fast', 'This website is slow. and fastThis website is slow. and fastThis website is slow. and fastThis website is slow. and fast');
 
 -- --------------------------------------------------------
 
@@ -93,7 +116,6 @@ INSERT INTO `user` (`user_id`, `user_name`, `user_phone`, `user_email`, `user_us
 (1, 'Abu Bakar Siddique', '01677415660', 'akash@gmail.com', 'akash', 'c4ca4238a0b923820dcc509a6f75849b', 1, 'user_1695530461_537468.jpg', 'U651ba2e50dc48'),
 (2, 'Labib Rahaman', '0161283123', 'labib@gmail.com', 'labib', '6512bd43d9caa6e02c990b0a82652dca', 3, 'user_1695614694_125802.jpg', 'U651ba2e50dc49'),
 (3, 'Farin Habib', '01612345678', 'farin@gmail.com', 'farin', 'c4ca4238a0b923820dcc509a6f75849b', 4, 'user_1695530521_935748.jpg', 'U651ba2e50dc50'),
-(4, 'Alfahad Islam', '0677415660', 'alfahad@gmail.com', 'alfahad', 'c4ca4238a0b923820dcc509a6f75849b', 2, '', 'U651ba2e50dc51'),
 (5, 'Aqib Reza', '01712345678', 'aqib@gmail.com', 'aqib', 'c4ca4238a0b923820dcc509a6f75849b', 5, 'user_1695530613_191691.webp', 'U651ba2e50dc52'),
 (6, 'Abullah', '01612347778', 'abullah@gmail.com', 'abullah', '6512bd43d9caa6e02c990b0a82652dca', 5, 'user_1695541247_651284.webp', 'U651ba2e50dc53'),
 (7, 'Biriyani Kachi', '01799988877', 'biriyani@gmail.com', 'biriyani', 'c4ca4238a0b923820dcc509a6f75849b', 1, 'user_1696398806_857847.jpg', 'U651cfdd6cd7ef');
@@ -107,6 +129,12 @@ INSERT INTO `user` (`user_id`, `user_name`, `user_phone`, `user_email`, `user_us
 --
 ALTER TABLE `banners`
   ADD PRIMARY KEY (`ban_id`);
+
+--
+-- Indexes for table `contact`
+--
+ALTER TABLE `contact`
+  ADD PRIMARY KEY (`con_id`);
 
 --
 -- Indexes for table `roles`
@@ -132,7 +160,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `banners`
 --
 ALTER TABLE `banners`
-  MODIFY `ban_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ban_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `contact`
+--
+ALTER TABLE `contact`
+  MODIFY `con_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `roles`
