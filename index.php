@@ -6,7 +6,7 @@
     <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="owl-carousel header-carousel position-relative">
             <?php
-                $selb="SELECT * FROM banners ORDER BY ban_id DESC";
+                $selb="SELECT * FROM banners ORDER BY ban_id LIMIT 0,3";
                 $Qb=mysqli_query($con,$selb);
                 while($banner=mysqli_fetch_assoc($Qb)){
                 

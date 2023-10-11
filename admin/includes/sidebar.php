@@ -20,7 +20,7 @@
                         <?php } if ($_SESSION['role'] <= 2 ){  ?>
                         <li><a href="all-banner.php"><i class="fas fa-images"></i> Banner</a></li>
                         <?php } ?>
-                        <li><a href="#"><i class="fas fa-comments"></i> Contact Message</a></li>
+                        <li><a href="all-message.php"><i class="fas fa-comments"></i> Contact Message</a></li>
                         <li><a href="#"><i class="fas fa-globe"></i> Live Site</a></li>
                         <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
                     </ul>
