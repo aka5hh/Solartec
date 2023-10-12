@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 11, 2023 at 11:25 AM
+-- Generation Time: Oct 12, 2023 at 12:15 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -93,6 +93,36 @@ INSERT INTO `roles` (`role_id`, `role_name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `services`
+--
+
+CREATE TABLE `services` (
+  `service_id` int(11) NOT NULL,
+  `service_title` varchar(100) NOT NULL,
+  `service_details` text NOT NULL,
+  `service_icon` varchar(50) NOT NULL,
+  `service_image` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `team`
+--
+
+CREATE TABLE `team` (
+  `member_id` int(11) NOT NULL,
+  `member_name` varchar(50) NOT NULL,
+  `member_designation` varchar(50) NOT NULL,
+  `member_facebook` varchar(200) NOT NULL,
+  `member_twiter` varchar(100) NOT NULL,
+  `member_instagram` varchar(100) NOT NULL,
+  `member_photo` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user`
 --
 
@@ -143,6 +173,18 @@ ALTER TABLE `roles`
   ADD PRIMARY KEY (`role_id`);
 
 --
+-- Indexes for table `services`
+--
+ALTER TABLE `services`
+  ADD PRIMARY KEY (`service_id`);
+
+--
+-- Indexes for table `team`
+--
+ALTER TABLE `team`
+  ADD PRIMARY KEY (`member_id`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -173,6 +215,18 @@ ALTER TABLE `contact`
 --
 ALTER TABLE `roles`
   MODIFY `role_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `services`
+--
+ALTER TABLE `services`
+  MODIFY `service_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `team`
+--
+ALTER TABLE `team`
+  MODIFY `member_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `user`
